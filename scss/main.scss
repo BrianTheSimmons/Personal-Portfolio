@@ -1,5 +1,6 @@
 @import "config";
 @import "utilities";
+@import "item_grid";
 
 * {
   margin: 0;
@@ -108,53 +109,71 @@ img {
   }
 }
 
-// Home Sections
-#home {
-  // Home Section A
-  &-a {
-    .specials {
-      margin-top: 3rem;
-      display: grid;
-      grid-gap: 1rem;
-      grid-template-columns: repeat(4, 1fr);
+// About Section
+#about {
+  .specials {
+    margin-top: 3rem;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
 
-      .fab {
-        color: $main-color;
-        padding-bottom: 0.4rem;
+    .fab {
+      color: $main-color;
+      padding-bottom: 0.4rem;
+    }
+  }
+}
+
+// Projects Section
+
+// Footer
+#main-footer {
+  background: $dark-color;
+  color: #fff;
+  height: 5rem;
+
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center;
+
+    .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0.5rem;
+
+      &:hover {
+        background: $main-color;
       }
     }
   }
+}
 
-  // Home Section B
-  &-b {
-    .stats {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+// Contact Section
+#contact {
+  .my-contact {
+    p {
+      margin-bottom: 1rem;
+    }
+    .fas {
+      // margin-right: 0.5rem;
+      margin-right: 1rem;
+      border: 2px #333 solid;
+      border-radius: 50%;
+      text-align: center;
+      padding: 0.5rem;
 
-      li {
-        line-height: 2;
-
-        &.stats-title {
-          font-size: 1.5rem;
-        }
-
-        &.stats-number {
-          font-size: 2rem;
-          font-weight: bold;
-        }
+      &:hover {
+        background: $main-color;
       }
+    }
 
-      div {
-        padding: 3rem 0;
-
-        &:nth-child(odd) {
-          background: $light-color;
-        }
-
-        &:nth-child(even) {
-          background: $medium-color;
-        }
-      }
+    .contact-lead {
+      font-size: 1.3rem;
+      font-weight: bold;
     }
   }
 }
