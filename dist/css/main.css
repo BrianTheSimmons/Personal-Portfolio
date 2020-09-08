@@ -156,6 +156,9 @@ input[class^="btn-"]:hover {
     opacity: 0.7;
     margin: 0; }
 
+html {
+  scroll-behavior: smooth; }
+
 * {
   margin: 0;
   padding: 0;
@@ -294,3 +297,17 @@ img {
   border: 0;
   border-radius: 5px;
   cursor: pointer; }
+
+.backtotopbtn {
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  background: #ffbc00;
+  bottom: 30px;
+  right: 50px;
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  z-index: 3;
+  opacity: 0.8; }
